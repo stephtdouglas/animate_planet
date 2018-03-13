@@ -6,7 +6,8 @@ import numpy as np
 from draw_orbs import draw_star, draw_planet
 
 def animate_planet(star_radius=10,planet_radius=1,orbit_radius=20,
-                   frames_per_orbit=20,nframes=20,filebase="planet"):
+                   frames_per_orbit=20,nframes=20,view_angle=90,
+                   filebase="planet"):
 
 
 
@@ -15,6 +16,7 @@ def animate_planet(star_radius=10,planet_radius=1,orbit_radius=20,
     for i in range(nframes):
         fig = plt.figure(figsize=(9,9))
         ax = fig.add_subplot(111,projection='3d')
+        ax.view_init(view_angle,0)
 
         lim = planet_radius + orbit_radius + 1
         ax.set_xlim(-1*lim,lim)
