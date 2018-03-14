@@ -12,8 +12,8 @@ def draw_star(star_color="Red",star_radius=10,
         fig = plt.figure(figsize=(9,9))
         ax = fig.add_subplot(111,projection='3d')
 
-    phi = np.linspace(0,2*np.pi,256)
-    theta = np.linspace(0,np.pi,128)
+    phi = np.linspace(0,2*np.pi,512)
+    theta = np.linspace(0,np.pi,256)
 
     r = star_radius
 
@@ -35,12 +35,12 @@ def draw_planet(planet_color="c",planet_radius=1,
         fig = plt.figure(figsize=(9,9))
         ax = fig.add_subplot(111,projection='3d')
 
-    phi = np.linspace(0,2*np.pi,256)
-    theta = np.linspace(0,np.pi,128)
+    phi = np.linspace(0,2*np.pi,512)
+    theta = np.linspace(0,np.pi,256)
 
     r = planet_radius
 
-    s = orbit_radius 
+    s = orbit_radius
     orbit_x = s*np.cos(orbit_phi)
     orbit_y = s*np.sin(orbit_phi)
 
@@ -63,5 +63,5 @@ if __name__=="__main__":
     ax.set_ylim(-16,16)
     ax.set_zlim(-16,16)
 
-    plt.savefig("demo_planet.png")
+    plt.savefig("demo_planet.png",dpi=600,bbox_inches=tight)
     plt.close()
