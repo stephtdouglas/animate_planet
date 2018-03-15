@@ -66,9 +66,9 @@ if __name__=="__main__":
                    orbit_radius=orbit_radius,frames_per_orbit=frames_per_orbit,
                    nframes=nframes,star_color=star_color,
                    planet_color=planet_color,bkgd_color=background1,
-                   view_angle=,filebase="planet_30_offedge_grey")
+                   view_angle=30,filebase="planet_30_offedge_grey")
     animate_planet(star_radius=star_radius,planet_radius=planet_radius,
                    orbit_radius=orbit_radius,frames_per_orbit=frames_per_orbit,
                    nframes=nframes,star_color=star_color,
                    planet_color=planet_color,bkgd_color=background2,
-                   view_angle=5,filebase="planet_30_offedge_black")
+                   view_angle=30,filebase="planet_30_offedge_black")
